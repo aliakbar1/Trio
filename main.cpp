@@ -25,53 +25,49 @@ colors(red,green, blue);
 // <-- ADD YOUR FUNCTION DEFINITON HERE
  void colors(int &a, int &b, int &c)
 {
-  if(a>b && b>c )
+  if(a>b && b>c && a>c  )
   {
     //already in order
   }
-  else if (b > a && a > c) 
+  else if (b > a && a > c && b > c ) 
   {
     int temp = b;
     b = a;
     a = temp;
+    
   }
 
-  else if(b>c && c >a)
+  else if(b>c && c >a && b > a )
   {
     int temp = b;
     b= c;
     c=temp;
     int temp2 =c;
-      c= a;
+    c= a;
     a=temp2;
   } 
-  else if(c > b && b > a)
+  else if(c > b && b > a && c>a)
     {
       int temp = c;
-      c=b ;
-      b=temp;
-      int temp2=b;
-        b=a;
-        a=temp2;
+      c=a ;
+      a=temp;
       
     }
-   else if(a > c && c > b)
+   else if(a > c && c > b && a>b)
       { 
-        int temp = a;
-        c = a ;
-        a = temp;
+        int temp = b;
+        c = b ;
+        b = temp;
       }
-  else if(c > a && a > b)
+  else if(c > a && a > b && c>b )
       { 
         int temp = c;
         c=a ;
         a=temp;
-       int  temp2=a;
-        a= b;
-        b= temp2;
+        int temp2=b;
+       b =c;
+        c=temp2;
+    
       }
-
-
-
 //BY THE END OF THE FUNCITON, A > B AND B > C
 }
